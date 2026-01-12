@@ -24,3 +24,5 @@ prisma/migrations/dev.db
 
 # Docker
 pgdata/
+
+/src/generated/prisma
