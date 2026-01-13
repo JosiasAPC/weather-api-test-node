@@ -43,6 +43,7 @@ A aplicação:
 
 ## Estrutura do projeto
 
+```
 project-root/
 │
 ├── prisma/
@@ -60,12 +61,12 @@ project-root/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── .env.docker.example
-├── .env.example
 ├── .gitignore
 ├── .dockerignore
 ├── tsconfig.json
 ├── package.json
 └── README.md
+```
 
 ---
 
@@ -102,7 +103,9 @@ https://openweathermap.org/api
 
 ### 2. Subir a aplicação
 
+```
 docker compose up -d --build
+```
 
 ### 3. Aplicar migrations do banco
 
@@ -110,13 +113,15 @@ docker compose exec api npx prisma migrate deploy
 
 Isso garante que o banco seja criado corretamente mesmo em um ambiente novo.
 
-Endpoints disponíveis
-Método Rota Descrição
-GET, /health, Verifica se API e banco estão ativos
-GET, /fetch?city=Itajai, Busca clima e salva no banco
-GET, /weather, Lista registros salvos
-GET, /weather/latest?city=Itajai, Último registro da cidade
-GET, /docs, Documentação Swagger
+**Endpoints disponíveis**
+
+| Método | Rota                        | Descrição                            |
+| ------ | --------------------------- | ------------------------------------ |
+| GET    | /health                     | Verifica se API e banco estão ativos |
+| GET    | /fetch?city=Itajai          | Busca clima e salva no banco         |
+| GET    | /weather                    | Lista registros salvos               |
+| GET    | /weather/latest?city=Itajai | Último registro da cidade            |
+| GET    | /docs                       | Documentação Swagger                 |
 
 ### Documentação
 
