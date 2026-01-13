@@ -5,7 +5,9 @@ node_modules/
 dist/
 
 # Env
-.env
+.env*
+!.env.docker.example
+
 
 # Logs
 npm-debug.log*
